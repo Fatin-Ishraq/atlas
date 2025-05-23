@@ -1,0 +1,20 @@
+.main-title.visually-hidden {
+    position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px;
+}
+
+#title-animation-svg {
+    width: 80%;
+    max-width: 600px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 0.25em; /* Top margin 0, bottom margin like H1 */
+    overflow: visible; /* Important for quill */
+}
+
+/* .svg-text-lora is defined within the SVG's <style> tag for font access */
+/* GSAP will handle stroke-dasharray/offset for these text elements */
+
+#quillSvg {
+    opacity: 0; /* Start hidden */
+    transform-origin: 0px 0px; /* Assumes nib is at local 0,0 */
+}

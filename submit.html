@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Archives - Whisper to Eternity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="submit-page-body"> <!-- Special class for ledger background -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="archives.html" class="nav-link">Archives</a>
+            <a href="submit.html" class="nav-link active">Submit</a>
+            <a href="about.html" class="nav-link">About Us</a>
+        </nav>
+    </header>
+
+    <main class="submit-main-content">
+        <section class="submit-introduction">
+            <h1 class="submit-page-title">Whisper Your Story into History</h1>
+            <p class="submit-intro-text">
+                Your memories are precious threads in the grand tapestry of human experience. Entrust them to the Archives, and let your echo resonate through time. Pen your thoughts, share a cherished image, or lend your voice to the chorus of ages.
+            </p>
+        </section>
+
+        <section class="form-and-preview-container">
+            <div class="form-ledger-area">
+                <form id="memoryForm" class="memory-submission-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="memoryName" class="form-label-script">Your Name (Optional)</label>
+                            <input type="text" id="memoryName" name="memoryName" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="memoryDate" class="form-label-script">Date of Memory</label>
+                            <input type="text" id="memoryDate" name="memoryDate" class="form-input" placeholder="e.g., Spring 1988, July 4th, 2001">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="memoryType" class="form-label-script">Type of Memory</label>
+                            <select id="memoryType" name="memoryType" class="form-select">
+                                <option value="">Select type...</option>
+                                <option value="letter">Letter / Text</option>
+                                <option value="image">Image / Artwork</option>
+                                <option value="audio">Voice Note / Audio</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="memoryTitle" class="form-label-script">Title</label>
+                            <input type="text" id="memoryTitle" name="memoryTitle" class="form-input" required>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="memoryDescription" class="form-label-script">Brief Description</label>
+                        <textarea id="memoryDescription" name="memoryDescription" class="form-textarea" rows="3"></textarea>
+                     </div>
+
+                    <div class="form-group form-group-conditional" id="textInputArea" style="display: none;">
+                        <label for="memoryTextContent" class="form-label-script">Your Written Memory</label>
+                        <textarea id="memoryTextContent" name="memoryTextContent" class="form-textarea" rows="8"></textarea>
+                    </div>
+
+                    <div class="form-group form-group-conditional" id="fileUploadArea" style="display: none;">
+                        <label for="memoryFile" class="form-label-script">Upload Your Memory File</label>
+                        <div class="file-upload-styled">
+                            <span class="file-upload-icon"></span> <!-- Paperclip emoji -->
+                            <span class="file-upload-text">Choose file...</span>
+                            <input type="file" id="memoryFile" name="memoryFile" class="form-input-file">
+                        </div>
+                        <span id="fileNameDisplay" class="file-name-display"></span>
+                    </div>
+
+                    <div class="form-submit-area">
+                        <button type="submit" id="submitMemoryButton" class="submit-button wax-seal-button">
+                            <span class="button-text">Entrust to the Archives</span>
+                            <span class="wax-seal-graphic"></span> <!-- For wax seal visual -->
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="preview-ledger-area" id="previewArea" style="display: none;">
+                <h2 class="preview-title-script">Your Inscription Preview</h2>
+                <div class="preview-content">
+                    <h3 id="previewMemoryTitle" class="preview-entry-title"></h3>
+                    <p id="previewMemoryDate" class="preview-entry-date"></p>
+                    <p id="previewMemoryDescription" class="preview-entry-description"></p>
+                    <div id="previewMemoryText" class="preview-entry-text" style="display:none;"></div>
+                    <img id="previewMemoryImage" src="#" alt="Image Preview" class="preview-entry-image" style="display:none;">
+                    <audio id="previewMemoryAudio" controls class="preview-entry-audio" style="display:none;"></audio>
+                    <p id="previewFileName" class="preview-entry-filename" style="display:none;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Thank You Modal ("The Keeper's Affirmation") -->
+    <div id="thankYouModal" class="submit-thank-you-modal" style="display: none;">
+        <div class="modal-note-paper">
+            <h3 class="modal-note-title">A Whisper Received</h3>
+            <p id="thankYouMessageText" class="modal-note-text">
+                <!-- Text will be animated here -->
+            </p>
+            <button id="closeThankYouModal" class="modal-note-close-button">Dismiss</button>
+        </div>
+    </div>
+
+    <footer class="site-footer-bottom">
+        <p>© 2025 Atlas Archives. Project by Gemini.</p>
+    </footer>
+
+    <script src="js/howler.min.js"></script> <!-- If needed for sounds on this page -->
+    <script src="submit.js" defer></script>
+</body>
+</html>

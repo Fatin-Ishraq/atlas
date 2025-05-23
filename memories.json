@@ -1,0 +1,122 @@
+[
+    {
+      "id": "mem001",
+      "title": "A Letter from the Trenches",
+      "type": "letter",
+      "tags": ["War", "Hope", "Family", "Remembrance"],
+      "date_display": "Spring, 1917",
+      "image_preview": "assets/images/previews/preview_letter_folded_sepia.png",
+      "content_path": null,
+      "modal_content": {
+        "type": "text",
+        "text": "My Dearest Eleanor,\n\nThe ink feels heavy tonight, much like the air here. Dawn approaches, and with it, a tension that settles deep in the bones. Yet, amidst the cacophony, my thoughts drift to you, to the scent of lavender in our garden, to the warmth of your hand in mine. \n\nDo you remember the old oak by the river? I find myself sketching it in my mind, its sturdy branches a symbol of the endurance I pray for. Tell little Arthur I carry his drawing of a 'brave soldier' in my breast pocket. It is a finer shield than any armour.\n\nKeep the home fires burning, my love. Your letters are beacons in this endless night. Until we meet again, hold fast to hope. \n\nYours forever,\nThomas",
+        "description": "A poignant letter penned from the Western Front during World War I."
+      },
+      "audio_on_open": "assets/sounds/modal_open_paper_rustle.mp3"
+    },
+    {
+      "id": "mem002",
+      "title": "First Steps on the Moon",
+      "type": "image",
+      "tags": ["Exploration", "Achievement", "History", "Wonder"],
+      "date_display": "July 20, 1969",
+      "image_preview": "assets/images/previews/preview_moon_landing_small.jpg",
+      "content_path": "assets/images/full/moon_landing_large.jpg",
+      "modal_content": {
+        "type": "image",
+        "text": null,
+        "description": "A grainy but iconic photograph capturing humanity's first steps on a celestial body."
+      },
+      "audio_on_open": "assets/sounds/modal_open_chime_celestial.mp3"
+    },
+    {
+      "id": "mem003",
+      "title": "Grandmother's Lullaby",
+      "type": "audio",
+      "tags": ["Childhood", "Family", "Comfort", "Nostalgia"],
+      "date_display": "Recorded circa 1955",
+      "image_preview": "assets/images/previews/preview_vintage_microphone.png",
+      "content_path": "assets/audio/grandmothers_lullaby.mp3",
+      "modal_content": {
+        "type": "audio",
+        "text": null,
+        "description": "A crackling home recording of a traditional lullaby, sung with gentle affection."
+      },
+      "audio_on_open": "assets/sounds/modal_open_tape_click.mp3"
+    },
+    {
+      "id": "mem004",
+      "title": "The Emigrant's Journal",
+      "type": "letter",
+      "tags": ["Journey", "Loss", "New Beginnings", "Resilience"],
+      "date_display": "October 12, 1888",
+      "image_preview": "assets/images/previews/preview_journal_open.png",
+      "content_path": null,
+      "modal_content": {
+        "type": "text",
+        "text": "The crossing was arduous, the sea a relentless mistress. Many days, my heart ached for the rolling hills I left behind, for the faces I may never see again. But the sight of land this morning – a sliver of hope on the horizon – stirred something new within me.\n\nThey call this a new world. It feels raw, untamed, vast. I carry with me my mother's worn prayer book and a pouch of soil from our old farm. Small anchors in an ocean of uncertainty. I shall write of what I find here, for those who may follow, or for those who simply remember.\n\nMay fortitude be my companion.",
+        "description": "An excerpt from a journal detailing the arduous journey to a new land."
+      },
+      "audio_on_open": "assets/sounds/modal_open_paper_heavy.mp3"
+    },
+    {
+      "id": "mem005",
+      "title": "City Sunrise, 1920s",
+      "type": "image",
+      "tags": ["Urban", "Hope", "Industry", "RoaringTwenties"],
+      "date_display": "Circa 1928",
+      "image_preview": "assets/images/previews/preview_city_sunrise_20s_small.jpg",
+      "content_path": "assets/images/full/city_sunrise_20s_large.jpg",
+      "modal_content": {
+        "type": "image",
+        "text": null,
+        "description": "A hazy, sepia-toned photograph of a bustling city awakening to a new day, smoke rising from distant factories."
+      },
+      "audio_on_open": "assets/sounds/modal_open_chime_vintage.mp3"
+    },
+    {
+      "id": "mem006",
+      "title": "The Inventor's Blueprints",
+      "type": "image",
+      "tags": ["Innovation", "Dreams", "Discovery", "Steampunk"],
+      "date_display": "Late 19th Century",
+      "image_preview": "assets/images/previews/preview_blueprint_scroll_small.png",
+      "content_path": "assets/images/full/inventor_blueprint_large.png",
+      "modal_content": {
+        "type": "image",
+        "text": null,
+        "description": "Detailed, hand-drawn blueprints of a fantastical clockwork contraption, filled with intricate gears and annotations."
+      },
+      "audio_on_open": "assets/sounds/modal_open_scroll_unfurl.mp3"
+    },
+    {
+      "id": "mem007",
+      "title": "A Poet's Last Verses",
+      "type": "letter",
+      "tags": ["Art", "Melancholy", "Reflection", "Nature"],
+      "date_display": "Autumn, 1847",
+      "image_preview": "assets/images/previews/preview_quill_ink_paper.png",
+      "content_path": null,
+      "modal_content": {
+        "type": "text",
+        "text": "The leaves fall, rustling like old paper whispers.\nEach a memory, golden, brown, and crisper.\nThe wind sighs low, a mournful, tender tune,\nBeneath the pale, indifferent harvest moon.\n\nMy ink runs thin, my hand begins to tire,\nYet still I chase the flickering, fading fire\nOf words that dance, then vanish in the gray.\nPerhaps they'll bloom another, brighter day.\n\nRemember me not for triumphs, grand or few,\nBut for the love of beauty, strong and true.",
+        "description": "The final, reflective poem found amongst a reclusive poet's papers."
+      },
+      "audio_on_open": "assets/sounds/modal_open_pen_scratch.mp3"
+    },
+    {
+      "id": "mem008",
+      "title": "First Radio Broadcast",
+      "type": "audio",
+      "tags": ["Technology", "Communication", "History", "Innovation"],
+      "date_display": "December 24, 1906",
+      "image_preview": "assets/images/previews/preview_antique_radio.png",
+      "content_path": "assets/audio/fessenden_broadcast_excerpt.mp3",
+      "modal_content": {
+        "type": "audio",
+        "text": null,
+        "description": "A recreated excerpt of Reginald Fessenden's pioneering Christmas Eve radio broadcast, featuring voice and music."
+      },
+      "audio_on_open": "assets/sounds/modal_open_static_tune.mp3"
+    }
+  ]
