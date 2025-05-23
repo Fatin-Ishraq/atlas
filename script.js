@@ -37,15 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             onComplete: () => {
                 // After animation, fill the text and fade out quill or move it
                 console.log("Animation complete");
-                gsap.to(paths, { duration: 0.5, fill: 'var(--color-ink-main)', strokeWidth: 2.5 });
-                gsap.to(quill, { duration: 0.5, autoAlpha: 0, x: '+=50', y: '+=20' }); // Move quill away
-                // Optional: if the actual H1 should appear AFTER animation
-                // if (actualH1) {
-                //     gsap.set(actualH1, { className: 'main-title' }); // Remove visually-hidden
-                //     gsap.set(svg, { display: 'none' }); // Hide SVG
-                // }
-            }
-        });
+
 
         console.log("SVG:", svg);
         console.log("Quill:", quill);
@@ -101,103 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn("GSAP or SVG elements for title animation not found. Displaying static title.");
     }
 
-    const svg = document.getElementById('title-animation-svg');
-    const quill = document.getElementById('quillSvg');
-    const textAtlas = document.getElementById('textSvgAtlas');
-    const textArchives = document.getElementById('textSvgArchives');
-    const actualH1 = document.querySelector('.main-title.visually-hidden');
 
-    if (svg && quill && textAtlas && textArchives && typeof gsap !== 'undefined') {
-        // Prepare text for animation (GSAP creates temporary paths for text elements)
-        gsap.set([textAtlas, textArchives], { autoAlpha: 1 }); // Ensure text elements are stylable
-
-        // --- Initial Quill Position ---
-        // Get bounding box of the first letter of "Atlas" to position quill
-        // This requires the text to be briefly rendered.
-        let startXAtlas = 30; // Default from SVG
-        let startYAtlas = 80; // Default from SVG
-        try {
-            const atlasBBox = textAtlas.getBBox();
-            startXAtlas = atlasBBox.x - 10; // Position quill slightly before the text
-            startYAtlas = atlasBBox.y + atlasBBox.height / 1.5; // Near the baseline
-        } catch(e) { console.warn("Could not get BBox for textAtlas, using defaults."); }
-
-        gsap.set(quill, { autoAlpha: 1, x: startXAtlas, y: startYAtlas, rotate: -15, scale: 1.3 });
-
-        // --- GSAP Timeline ---
-        const tl = gsap.timeline({
-            delay: 0.5, // Slight delay before animation starts
-            onComplete: () => {
-                gsap.to([textAtlas, textArchives], { duration: 0.5, fill: 'var(--color-ink-main, #3a3027)', strokeWidth: 1 });
-                gsap.to(quill, { duration: 0.7, autoAlpha: 0, x: '+=60', y: '+=30', ease: 'power1.in' });
-                console.log("Animation complete");
-            }
-        });
-
-        console.log("DrawSVGPlugin is", DrawSVGPlugin);
-        gsap.registerPlugin(DrawSVGPlugin);
-
-        // 1. Animate "Atlas"
-        const atlasDrawDuration = 1.5; // Duration to "draw" Atlas
-        tl.from(textAtlas, {
-            duration: atlasDrawDuration,
-            drawSVG: "0%", // GSAP's DrawSVGPlugin functionality (works on text too)
-            ease: "power1.inOut",
-            onUpdate: () => console.log("Atlas animation updating")
-        });
-                 // if (svg) svg.style.display = 'none';
-            }
-        });
-
-        // 1. Animate "Atlas"
-        const atlasDrawDuration = 1.5; // Duration to "draw" Atlas
-        tl.from(textAtlas, {
-            duration: atlasDrawDuration,
-            drawSVG: "0%", // GSAP's DrawSVGPlugin functionality (works on text too)
-            ease: "power1.inOut"
-        });
-        // Approximate quill movement for "Atlas"
-        // It will move from its start position to roughly the end of where "Atlas" is.
-        // You MUST adjust the 'x' value below based on the width of "Atlas" text.
-        tl.to(quill, {
-            x: startXAtlas + (textAtlas.getBBox ? textAtlas.getBBox().width + 10 : 150), // Move to end of Atlas
-            duration: atlasDrawDuration,
-            ease: "sine.inOut"
-        }, "<"); // Starts with text drawing
-
-        // 2. Move quill to "Archives"
-        let startXArchives = 230; // Default from SVG
-        try {
-            const archivesBBox = textArchives.getBBox();
-            startXArchives = archivesBBox.x - 10;
-        } catch(e) { console.warn("Could not get BBox for textArchives, using defaults."); }
-
-        tl.to(quill, {
-            x: startXArchives,
-            y: startYAtlas, // Assuming same baseline
-            duration: 0.4,
-            ease: "power1.inOut"
-        }, "-=0.2"); // Overlap slightly with end of Atlas drawing
-
-        // 3. Animate "Archives"
-        const archivesDrawDuration = 2.0; // Duration to "draw" Archives
-        tl.from(textArchives, {
-            duration: archivesDrawDuration,
-            drawSVG: "0%",
-            ease: "power1.inOut"
-        });
-        // Approximate quill movement for "Archives"
-        tl.to(quill, {
-            x: startXArchives + (textArchives.getBBox ? textArchives.getBBox().width + 10 : 300), // Move to end of Archives
-            duration: archivesDrawDuration,
-            ease: "sine.inOut"
-        }, "<");
-
-    } else {
-        if (actualH1) actualH1.classList.remove('visually-hidden');
-        if (svg) svg.style.display = 'none';
-        console.warn("GSAP or SVG elements for title animation not found, or DrawSVGPlugin not available. Displaying static title.");
-    }
 
     // DOM Elements
     const memoryGrid = document.querySelector('.memory-grid');
